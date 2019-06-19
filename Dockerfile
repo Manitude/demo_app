@@ -1,7 +1,7 @@
 FROM ruby:2.3
 MAINTAINER manish.tewary@dell.com
 
-RUN yum update -qq && yum install -y nodejs postgresql-client
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 RUN mkdir /app
 WORKDIR /app
 COPY Gemfile /app/Gemfile
